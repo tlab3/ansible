@@ -20,8 +20,8 @@
 
     - name: Get running-config and save it
 #      ios_config:
-       backup: yes
-       backup_options:
+#       backup: yes
+#       backup_options:
          #ansible_host = getting device IP, ansible_net_hostname = getting device hostname
          filename: "{{ ansible_net_hostname }}_{{ ansible_host }}.cfg"
          #Please change /home/hawar/Desktop to your direcotry
