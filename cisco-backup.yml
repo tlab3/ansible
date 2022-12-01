@@ -18,7 +18,7 @@
       local_action: command date +%H:%M
       register: time
 
-    - name: Get running-config and save it
+- name: Get running-config and save it
       ios_config:
        backup: yes
        backup_options:
