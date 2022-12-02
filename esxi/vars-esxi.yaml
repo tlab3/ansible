@@ -4,4 +4,4 @@ vcenter_datacenter: "Datacenter"
 vcenter_validate_certs: false
 vcenter_username: "administrator@vcenter.jjdc"
 vcenter_password: "Datait2022!"
-cluster_name: "jjdc-cluster"
+cluster_name: "JJDC-cluster"
