@@ -78,53 +78,53 @@
 #          host_plat: WinSvr2k16
 #      when: host_template == "win2k16"
 
-    - name: netbox
-      netbox_virtual_machine:
-        netbox_url: "{{ nb_url }}"
-        validate_certs: False
-        netbox_token: "{{ nb_token }}"
-        data:
-          name: "{{host_name_prefix}}{{ host_name }}"
-          virtual_machine_role: "{{ host_role }}"
-          site: "{{ host_site }}"
-          tenant: "{{ ten }}"
-          cluster: "{{ host_cluster }}"
-          disk: "{{ host_disk }}"
-          vcpus: "{{ host_vcpu }}"
-          memory: "{{ host_mem }}"
-          platform: "{{ host_plat }}"
-          status: Active
-        state: present
+#    - name: netbox
+#      netbox_virtual_machine:
+#        netbox_url: "{{ nb_url }}"
+#        validate_certs: False
+#        netbox_token: "{{ nb_token }}"
+#        data:
+#          name: "{{host_name_prefix}}{{ host_name }}"
+#          virtual_machine_role: "{{ host_role }}"
+#          site: "{{ host_site }}"
+#          tenant: "{{ ten }}"
+#          cluster: "{{ host_cluster }}"
+#          disk: "{{ host_disk }}"
+#          vcpus: "{{ host_vcpu }}"
+#          memory: "{{ host_mem }}"
+#          platform: "{{ host_plat }}"
+#          status: Active
+#        state: present
     
-    - name: NB Task 2 - Create an Interface for NetBox VM entry
-      netbox_vm_interface:
-        netbox_url: "{{ nb_url }}"
-        validate_certs: False
-        netbox_token: "{{ nb_token }}"
-        data:
-          name: "{{ host_net_name }}"
-          untagged_vlan: "{{ host_net_vlan }}"
-          description: "{{ host_net_desc }}"
-          virtual_machine: "{{ host_name_prefix }}{{ host_name }}"
-          mode: Access
-          enabled: yes
-        state: present
-      
-    - name: NB Task 3 - Get new IP address, assign to VM interface, then create NB entry
-      netbox_ip_address:
-        netbox_url: "{{ nb_url }}"
-        validate_certs: False
-        netbox_token: "{{ nb_token }}"
-        data:
-          prefix: "{{ nb_prefix }}"
-          dns_name: "{{ host_name_prefix }}{{ host_name }}.lab.local"
-          description: "{{ host_desc }}"
-          tenant: "{{ ten }}"
-          assigned_object:
-            name: "{{ host_net_name }}"
-            virtual_machine: "{{ host_name_prefix }}{{ host_name }}"
-        state: new
-      register: ip
+#    - name: NB Task 2 - Create an Interface for NetBox VM entry
+#      netbox_vm_interface:
+#        netbox_url: "{{ nb_url }}"
+#        validate_certs: False
+#        netbox_token: "{{ nb_token }}"
+#        data:
+#          name: "{{ host_net_name }}"
+#          untagged_vlan: "{{ host_net_vlan }}"
+#          description: "{{ host_net_desc }}"
+#          virtual_machine: "{{ host_name_prefix }}{{ host_name }}"
+#          mode: Access
+#          enabled: yes
+#        state: present
+#      
+#    - name: NB Task 3 - Get new IP address, assign to VM interface, then create NB entry
+#      netbox_ip_address:
+#        netbox_url: "{{ nb_url }}"
+#        validate_certs: False
+#        netbox_token: "{{ nb_token }}"
+#        data:
+#          prefix: "{{ nb_prefix }}"
+#          dns_name: "{{ host_name_prefix }}{{ host_name }}.lab.local"
+#          description: "{{ host_desc }}"
+#          tenant: "{{ ten }}"
+#          assigned_object:
+#            name: "{{ host_net_name }}"
+#            virtual_machine: "{{ host_name_prefix }}{{ host_name }}"
+#        state: new
+#      register: ip
 
 
     - name: IP Task 1 - Copy new IP address to file
