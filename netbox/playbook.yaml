@@ -78,7 +78,7 @@
 #          host_plat: WinSvr2k16
 #      when: host_template == "win2k16"
 
-    - name: test2
+#    - name: test2
       netbox_virtual_machine:
         netbox_url: "{{ nb_url }}"
         validate_certs: False
