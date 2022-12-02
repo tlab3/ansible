@@ -55,7 +55,7 @@
 ## NetBox Platforms
 
 ### Ubuntu Templates
-    - name: Set NB Platform var dependent on template chosen
+    - name: test
       set_fact:
           host_plat: ubuntu
       when: host_template == "ubuntu"
