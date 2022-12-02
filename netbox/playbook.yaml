@@ -1,6 +1,6 @@
 ---
 
-- name: "Deploy VM Host & NetBox"
+#- name: "Deploy VM Host & NetBox"
   connection: local
   hosts: localhost
   gather_facts: False
@@ -14,7 +14,7 @@
 ##IP Prefixes used by Netbox
 
 ### Set the Corporate Envirionment vars
-    - name: Set vars for environment Corporate
+#    - name: Set vars for environment Corporate
       set_fact:
           nb_prefix: "{{ corp_prefix }}"
           vcenter_folder: "{{ corp_name }}"
