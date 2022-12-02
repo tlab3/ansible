@@ -55,7 +55,7 @@
 ## NetBox Platforms
 
 ### Ubuntu Templates
-    - name: test
+    - name: test1
       set_fact:
           host_plat: ubuntu
       when: host_template == "ubuntu"
@@ -78,7 +78,7 @@
 #          host_plat: WinSvr2k16
 #      when: host_template == "win2k16"
 
-    - name: NB Task 1 Create a new NetBox VM entry
+    - name: test2
       netbox_virtual_machine:
         netbox_url: "{{ nb_url }}"
         validate_certs: False
