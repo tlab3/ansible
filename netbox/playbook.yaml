@@ -7,7 +7,7 @@
   collections:
     - netbox.netbox
   vars_files:
-    - ./vars/vars.yaml
+    - /runner/project/netbox/vars.yaml
 
   tasks:
 
