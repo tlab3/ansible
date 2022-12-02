@@ -1,6 +1,6 @@
 ---
 
-#- name: "Deploy VM Host & NetBox"
+- name: "Deploy VM Host & NetBox"
   connection: local
   hosts: localhost
   gather_facts: False
@@ -14,7 +14,7 @@
 ##IP Prefixes used by Netbox
 
 ### Set the Corporate Envirionment vars
-#    - name: Set vars for environment Corporate
+    - name: Set vars for environment Corporate
       set_fact:
           nb_prefix: "{{ corp_prefix }}"
           vcenter_folder: "{{ corp_name }}"
@@ -22,7 +22,7 @@
           host_net_ipnetmask: "{{ corp_netmask }}"
           host_net_ipgwy: "{{ corp_ipgwy }}"
           host_net_dns: "{{ corp_dns }}"
-#          host_tag: "{{ corp_tag }}"
+          host_tag: "{{ corp_tag }}"
           host_name_prefix: "{{ corp_host_name_prefix }}"
       when: host_env == "Corporate"
 
@@ -55,7 +55,7 @@
 ## NetBox Platforms
 
 ### Ubuntu Templates
-#    - name: test1
+    - name: OS
       set_fact:
           host_plat: ubuntu
       when: host_template == "ubuntu"
@@ -78,7 +78,7 @@
 #          host_plat: WinSvr2k16
 #      when: host_template == "win2k16"
 
-#    - name: test2
+    - name: netbox
       netbox_virtual_machine:
         netbox_url: "{{ nb_url }}"
         validate_certs: False
@@ -96,7 +96,7 @@
           status: Active
         state: present
     
-#    - name: NB Task 2 - Create an Interface for NetBox VM entry
+    - name: NB Task 2 - Create an Interface for NetBox VM entry
       netbox_vm_interface:
         netbox_url: "{{ nb_url }}"
         validate_certs: False
@@ -110,7 +110,7 @@
           enabled: yes
         state: present
       
-#    - name: NB Task 3 - Get new IP address, assign to VM interface, then create NB entry
+    - name: NB Task 3 - Get new IP address, assign to VM interface, then create NB entry
       netbox_ip_address:
         netbox_url: "{{ nb_url }}"
         validate_certs: False
@@ -127,23 +127,23 @@
       register: ip
 
 
-#    - name: IP Task 1 - Copy new IP address to file
+    - name: IP Task 1 - Copy new IP address to file
       local_action:
         module: copy
         content: "{{ ip.ip_address.address }}"
         dest: "{{ ipaddrtxt }}"
     
- #   - name: IP Task 2 - Replace /x netmask in gathered IP from NetBox
+    - name: IP Task 2 - Replace /x netmask in gathered IP from NetBox
       replace:
         path: "{{ ipaddrtxt }}"
         regexp: \/\w+$
         replace: ''
       
- #   - name: IP Task 3 - Create var from the ippaddr.txt file
+    - name: IP Task 3 - Create var from the ippaddr.txt file
       set_fact:
         ipaddr: "{{ lookup('file', '{{ ipaddrtxt }}') }}"
 
- #   - name: VCENTER Task 1 - Create a virtual machine from a template
+    - name: VCENTER Task 1 - Create a virtual machine from a template
       community.vmware.vmware_guest:
         hostname: "{{ vcenter_host }}"
         username: "{{ vcenter_user }}"
