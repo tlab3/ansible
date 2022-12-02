@@ -6,7 +6,7 @@
   collections:
     - community.vmware
   pre_tasks:
-    - include_vars: vars.yaml
+    - include_vars: vars-esxi.yaml
   tasks:
     - name: gather info about all esxi hosts in cluster
       community.vmware.vmware_host_config_info:
