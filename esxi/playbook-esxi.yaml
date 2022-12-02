@@ -1,4 +1,5 @@
 ---
+
 - name: host in cluster info
   hosts: localhost
   become: false
@@ -7,16 +8,17 @@
     - community.vmware
   pre_tasks:
     - include_vars: vars-esxi.yaml
+
   tasks:
     - name: gather info about all esxi hosts in cluster
       community.vmware.vmware_host_config_info:
-       hostname: "{{ vcenter_hostname }}"
-       username: "{{ vcenter_username }}"
-       password: "{{ vcenter_password }}"
-       validate_certs: "{{ vcenter_validate_certs }}"
-       cluster_name: "{{ cluster_name }}"
-     register: cluster_info
-     
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        validate_certs: "{{ vcenter_validate_certs }}"
+        cluster_name: "{{ cluster_name }}"
+      register: cluster_info
+
     - name: print cluster info
       ansible.builtin.debug:
         var: cluster_info
