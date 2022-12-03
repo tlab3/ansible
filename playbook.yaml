@@ -19,10 +19,10 @@
           nb_prefix: "{{ corp_prefix }}"
           vcenter_folder: "{{ corp_name }}"
           host_net_vlan: "{{ corp_name }}"
-#          host_net_ipnetmask: "{{ corp_netmask }}"
+          host_net_ipnetmask: "{{ corp_netmask }}"
           host_net_ipgwy: "{{ corp_ipgwy }}"
           host_net_dns: "{{ corp_dns }}"
-#          host_tag: "{{ corp_tag }}"
+          host_tag: "{{ corp_tag }}"
           host_name_prefix: "{{ corp_host_name_prefix }}"
       when: host_env == "Corporate"
 
