@@ -157,13 +157,12 @@
         template: "{{host_template}}"
         disk:
         - size_gb: "{{ host_disk }}"
-#          type: "{{ host_disktype }}"
+          type: "{{ host_disktype }}"
           datastore: "{{ host_dstore }}"
         hardware:
-          memory_gb: "{{ host_mem }}"
-          count: "{{ host_vcpu }}"
-#         num_cpus: "{{ host_vcpu }}"
-          cores_per_socket: "{{ host_cores }}"
+          memory_mb: "{{ host_mem }}"
+          num_cpus: "{{ host_vcpu }}"
+          num_cpu_cores_per_socket: "{{ host_cores }}"
           scsi: paravirtual
           memory_reservation_lock: True
           hotadd_cpu: True
@@ -174,9 +173,9 @@
         - name: "{{ host_net_vlan }}"
           type: static
           device_type: vmxnet3
-#          ip: "{{ ipaddr }}"
-#          netmask: "{{ host_net_netmask }}"
-#          gateway: "{{ host_net_ipgwy }}"
+          ip: "{{ ipaddr }}"
+          netmask: "{{ host_net_netmask }}"
+          gateway: "{{ host_net_ipgwy }}"
           dns_servers: "{{ host_net_dns }}"
 #        wait_for_ip_address: yes
 #        wait_for_ip_address_timeout: 300
