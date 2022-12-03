@@ -6,8 +6,8 @@
   gather_facts: False
   collections:
     - netbox.netbox
-  vars_files:
-    - ./vars/vars.yaml
+  pre_tasks:
+    - include_vars: vars.yaml
 
   tasks:
 
