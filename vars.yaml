@@ -50,8 +50,8 @@ nb_token: 0123456789abcdef0123456789abcdef01234567
 
 # Network Environment Configuration Vars
 ##  Corporate
-corp_name: Datacenter/VM Network
-#corp_tag:
+corp_name: Datacenter
+corp_tag: mgmt
 corp_host_name_prefix: labcvm01
 corp_prefix: 10.200.0.0/24
 corp_ipnetmask: 255.255.255.0
