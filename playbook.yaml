@@ -160,7 +160,7 @@
 #          type: "{{ host_disktype }}"
           datastore: "{{ host_dstore }}"
         hardware:
-          memory_mb: "{{ host_mem }}"
+          memory_gb: "{{ host_mem }}"
           num_cpus: "{{ host_vcpu }}"
           num_cpu_cores_per_socket: "{{ host_cores }}"
           scsi: paravirtual
