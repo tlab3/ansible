@@ -42,7 +42,7 @@
 #VCenter Connection
 vcenter_user: administrator@vcenter.jjdc
 vcenter_pass: Datait2022!
-vcenter_dc: Vcenter.jjdc/Datacenter
+vcenter_dc: Datacenter
 
 # NetBox Connection
 nb_url: http://10.200.0.42:8000
@@ -50,7 +50,7 @@ nb_token: 0123456789abcdef0123456789abcdef01234567
 
 # Network Environment Configuration Vars
 ##  Corporate
-corp_name: Datecenter/
+corp_name: VM Network
 #corp_tag:
 corp_host_name_prefix: labcvm01
 corp_prefix: 10.200.0.0/24
