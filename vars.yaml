@@ -59,17 +59,6 @@ corp_ipgwy: 10.200.0.1
 corp_dns:
   - 10.200.0.25
   - 10.200.0.27
-    
-## Production
-#prod_name: #This needs to match your VCenter port group and VCenter folder.
-#prod_tag:
-#prod_host_name_prefix:
-#prod_prefix: 
-#prod_ipnetmask: 
-#prod_ipgwy: 
-#prod_dns:
-#  - 0.0.0.0
-#  - 0.0.0.0
 
 #NetBox Management
 #host_net_name: vnic1
