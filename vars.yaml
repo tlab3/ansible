@@ -40,7 +40,7 @@
 
 
 #VCenter Connection
-vcenter_user: administrator
+vcenter_user: administrator@vcenter.jjdc
 vcenter_pass: Datait2022!
 vcenter_dc: Vcenter.jjdc
 
