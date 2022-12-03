@@ -53,9 +53,9 @@ nb_token: 0123456789abcdef0123456789abcdef01234567
 corp_name: Corporate
 #corp_tag:
 corp_host_name_prefix: 
-corp_prefix: 
-corp_ipnetmask: 
-corp_ipgwy: 
+corp_prefix: /24
+corp_ipnetmask: 255.255.255.0
+corp_ipgwy: 10.200.0.1
 corp_dns:
   - 10.200.0.25
   - 10.200.0.27
