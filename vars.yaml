@@ -42,7 +42,7 @@
 #VCenter Connection
 vcenter_user: administrator@vcenter.jjdc
 vcenter_pass: Datait2022!
-vcenter_dc: Datacenter
+vcenter_dc: Datacenter*
 
 # NetBox Connection
 nb_url: http://10.200.0.42:8000
