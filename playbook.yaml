@@ -157,7 +157,7 @@
         template: "{{host_template}}"
         disk:
         - size_gb: "{{ host_disk }}"
-          type: "{{ host_disktype }}"
+#          type: "{{ host_disktype }}"
           datastore: "{{ host_dstore }}"
         hardware:
           memory_mb: "{{ host_mem }}"
