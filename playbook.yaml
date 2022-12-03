@@ -127,22 +127,22 @@
 #      register: ip
 
 
-    - name: IP Task 1 - Copy new IP address to file
-      local_action:
-        module: copy
-        content: "{{ ip.ip_address.address }}"
-        dest: "{{ ipaddrtxt }}"
+#    - name: IP Task 1 - Copy new IP address to file
+#      local_action:
+#        module: copy
+#        content: "{{ ip.ip_address.address }}"
+#        dest: "{{ ipaddrtxt }}"
     
-    - name: IP Task 2 - Replace /x netmask in gathered IP from NetBox
-      replace:
-        path: "{{ ipaddrtxt }}"
-        regexp: \/\w+$
-        replace: ''
-      
-    - name: IP Task 3 - Create var from the ippaddr.txt file
-      set_fact:
-        ipaddr: "{{ lookup('file', '{{ ipaddrtxt }}') }}"
-
+#    - name: IP Task 2 - Replace /x netmask in gathered IP from NetBox
+#      replace:
+#        path: "{{ ipaddrtxt }}"
+#        regexp: \/\w+$
+#        replace: ''
+#      
+#    - name: IP Task 3 - Create var from the ippaddr.txt file
+#      set_fact:
+#        ipaddr: "{{ lookup('file', '{{ ipaddrtxt }}') }}"
+#
     - name: VCENTER Task 1 - Create a virtual machine from a template
       community.vmware.vmware_guest:
         hostname: "{{ vcenter_host }}"
