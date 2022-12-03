@@ -173,7 +173,7 @@
         - name: "{{ host_net_vlan }}"
           type: static
           device_type: vmxnet3
-          ip: "{{ ipaddr }}"
+#          ip: "{{ ipaddr }}"
           netmask: "{{ host_net_netmask }}"
           gateway: "{{ host_net_ipgwy }}"
           dns_servers: "{{ host_net_dns }}"
