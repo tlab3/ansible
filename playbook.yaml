@@ -161,8 +161,8 @@
           datastore: "{{ host_dstore }}"
         hardware:
           memory_mb: "{{ host_mem | int + 1}}"
-          num_cpus: "{{ host_vcpu }}"
-          num_cpu_cores_per_socket: "{{ host_cores }}"
+          num_cpus: "{{ host_vcpu | int + 1}}"
+          num_cpu_cores_per_socket: "{{ host_cores | int + 1}}"
           scsi: paravirtual
           memory_reservation_lock: True
           hotadd_cpu: True
