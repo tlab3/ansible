@@ -162,7 +162,8 @@
         hardware:
           memory_gb: "{{ host_mem }}"
           num_cpus: "{{ host_vcpu }}"
-          num_cpu_cores_per_socket: "{{ host_cores }}"
+          cores_per_socket: "{{ host_cores }}"
+#          num_cpu_cores_per_socket: "{{ host_cores }}"
           scsi: paravirtual
           memory_reservation_lock: True
           hotadd_cpu: True
