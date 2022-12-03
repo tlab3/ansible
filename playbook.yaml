@@ -173,9 +173,12 @@
         - name: "{{ host_net_vlan }}"
           type: static
           device_type: vmxnet3
+          ip: 10.200.0.180
 #          ip: "{{ ipaddr }}"
-          netmask: "{{ host_net_netmask }}"
-          gateway: "{{ host_net_ipgwy }}"
+          netmask: 255.255.255.0
+#          netmask: "{{ host_net_netmask }}"
+          gateway: 10.200.0.1
+#          gateway: "{{ host_net_ipgwy }}"
           dns_servers: "{{ host_net_dns }}"
 #        wait_for_ip_address: yes
 #        wait_for_ip_address_timeout: 300
