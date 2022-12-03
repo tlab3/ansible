@@ -82,14 +82,14 @@ corp_dns:
 #  - 0.0.0.0
 
 #NetBox Management
-host_net_name: vnic1
-host_net_desc: "{{ host_net_name }} connected to {{ host_net_vlan }}"
+#host_net_name: vnic1
+#host_net_desc: "{{ host_net_name }} connected to {{ host_net_vlan }}"
 ## IP Address Temp File
-ipaddrtxt: ./temp/ipaddr.txt
+#ipaddrtxt: ./temp/ipaddr.txt
 ## Host Config
-host_role: Virtual Machine
-host_site: JJDC-Datacenter
+#host_role: Virtual Machine
+#host_site: JJDC-Datacenter
 #host_rack:
 #host_cluster:
-tengrp: JJDC
-ten: JJDC
+#tengrp: JJDC
+#ten: JJDC
