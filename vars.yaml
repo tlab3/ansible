@@ -50,7 +50,7 @@ nb_token: 0123456789abcdef0123456789abcdef01234567
 
 # Network Environment Configuration Vars
 ##  Corporate
-corp_name: /Templates
+corp_name: /Datacenter/VM Network
 #corp_tag:
 corp_host_name_prefix: labcvm01
 corp_prefix: 10.200.0.0/24
@@ -59,6 +59,7 @@ corp_ipgwy: 10.200.0.1
 corp_dns:
   - 10.200.0.25
   - 10.200.0.27
+    
 ## Production
 #prod_name: #This needs to match your VCenter port group and VCenter folder.
 #prod_tag:
@@ -67,17 +68,6 @@ corp_dns:
 #prod_ipnetmask: 
 #prod_ipgwy: 
 #prod_dns:
-#  - 0.0.0.0
-#  - 0.0.0.0
-
-## Build
-#build_name: #This needs to match your VCenter port group and VCenter folder.
-#build_tag:
-#build_host_name_prefix:
-#build_prefix: 
-#build_ipnetmask: 
-#build_ipgwy: 
-#build_dns:
 #  - 0.0.0.0
 #  - 0.0.0.0
 
