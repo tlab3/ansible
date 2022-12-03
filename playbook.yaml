@@ -173,11 +173,11 @@
         - name: "{{ host_net_vlan }}"
           type: static
           device_type: vmxnet3
-          ip: "{{ ipaddr }}"
-          netmask: "{{ host_net_netmask }}"
-          gateway: "{{ host_net_ipgwy }}"
+#          ip: "{{ ipaddr }}"
+#          netmask: "{{ host_net_netmask }}"
+#          gateway: "{{ host_net_ipgwy }}"
           dns_servers: "{{ host_net_dns }}"
-        wait_for_ip_address: yes
-        wait_for_ip_address_timeout: 300
+#        wait_for_ip_address: yes
+#        wait_for_ip_address_timeout: 300
       delegate_to: localhost
       register: deploy
