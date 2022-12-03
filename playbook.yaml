@@ -19,7 +19,7 @@
           nb_prefix: "{{ corp_prefix }}"
           vcenter_folder: "{{ corp_name }}"
           host_net_vlan: "{{ corp_name }}"
-          host_net_ipnetmask: "{{ corp_netmask }}"
+          #host_net_ipnetmask: "{{ corp_netmask }}"
           host_net_ipgwy: "{{ corp_ipgwy }}"
           host_net_dns: "{{ corp_dns }}"
           host_tag: "{{ corp_tag }}"
