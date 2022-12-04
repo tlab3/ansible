@@ -48,23 +48,34 @@
           host_plat: opensuse
       when: host_template == "opensuse_leap"
 
-   - name: NB Task 1 - Create a new NetBox VM entry
-     netbox_virtual_machine:
-       netbox_url: "{{ nb_url }}"
-       #validate_certs: False
-       netbox_token: "{{ nb_token }}"
-       data:
-         name: "{{host_name_prefix}}{{ host_name }}"
-         virtual_machine_role: "{{ host_role }}"
-         site: "{{ host_site }}"
-         tenant: "{{ ten }}"
-         cluster: "{{ host_cluster }}"
-         disk: "{{ host_disk }}"
-         vcpus: "{{ host_vcpu }}"
-         memory: "{{ host_mem }}"
-         platform: "{{ host_plat }}"
-         status: Active
-       state: present
+##  #This is a test of netbox inegration
+     - name: this is a test
+       netbox_virtual_machine:
+        netbox_url: http://10.200.0.42
+        netbox_token: 0123456789abcdef0123456789abcdef01234567
+        data:
+          name: Test Virtual Machine
+          cluster: JJDC-Cluster
+        state: present
+   
+
+#    - name: NB Task 1 - Create a new NetBox VM entry
+#      netbox_virtual_machine:
+#        netbox_url: "{{ nb_url }}"
+#        #validate_certs: False
+#        netbox_token: "{{ nb_token }}"
+#        data:
+#          name: "{{host_name_prefix}}{{ host_name }}"
+#          virtual_machine_role: "{{ host_role }}"
+#          site: "{{ host_site }}"
+#          tenant: "{{ ten }}"
+#          cluster: "{{ host_cluster }}"
+#          disk: "{{ host_disk }}"
+#          vcpus: "{{ host_vcpu }}"
+#          memory: "{{ host_mem }}"
+#          platform: "{{ host_plat }}"
+#          status: Active
+#        state: present
     
 #    - name: NB Task 2 - Create an Interface for NetBox VM entry
 #      netbox_vm_interface:
