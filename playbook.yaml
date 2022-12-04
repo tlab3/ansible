@@ -50,7 +50,7 @@
 
 ###  #This is a test of netbox inegration
     - name: Test
-      netbox.netbox.netbox_virtual_machine:
+      netbox.netbox_virtual_machine:
         netbox_url: http://10.200.0.42:8000
         netbox_token: 0123456789abcdef0123456789abcdef01234567
         data:
