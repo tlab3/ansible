@@ -26,31 +26,7 @@
 #          host_name_prefix: "{{ corp_host_name_prefix }}"
       when: host_env == "Corporate"
 
-### Set the Production Envirionment vars
-#    - name: Set vars for environment DMZ
-#      set_fact:
-#          nb_prefix: "{{ prod_prefix }}"
-#          vcenter_folder: "{{ prod_name }}"
-#          host_net_vlan: "{{ prod_name }}"
-#          host_net_ipnetmask: "{{ prod_netmask }}"
-#          host_net_ipgwy: "{{ prod_ipgwy }}"
-#          host_net_dns: "{{ prod_dns }}"
-#          host_tag: "{{ prod_tag }}"
-#          host_name_prefix: "{{ prod_host_name_prefix }}"
-#      when: host_env == "Production"
 
-### Set the Build Envirionment vars
-#    - name: Set vars for environment Build
-#      set_fact:
-#          nb_prefix: "{{ build_prefix }}"
-#          vcenter_folder: "{{ build_name }}"
-#          host_net_vlan: "{{ build_name }}"
-#          host_net_ipnetmask: "{{ build_netmask }}"
-#          host_net_ipgwy: "{{ build_ipgwy }}"
-#          host_net_dns: "{{ build_dns }}"
-#          host_tag: "{{ build_tag }}"
-#          host_name_prefix: "{{ prod_host_name_prefix }}"
-#      when: host_env == "Build"
 
 ## NetBox Platforms
 
@@ -71,11 +47,6 @@
       set_fact:
           host_plat: opensuse
       when: host_template == "opensuse_leap"
-#  
-#    - name: Set NB Platform var dependent on template chosen
-#      set_fact:
-#          host_plat: WinSvr2k16
-#      when: host_template == "win2k16"
 
 #    - name: netbox
 #      netbox_virtual_machine:
