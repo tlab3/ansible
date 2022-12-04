@@ -69,6 +69,6 @@ corp_dns:
 #host_role: Virtual Machine
 #host_site: JJDC-Datacenter
 #host_rack:
-#host_cluster:
+#host_cluster: JJDC-Cluster
 #tengrp: JJDC
 #ten: JJDC
