@@ -55,23 +55,22 @@
 ## NetBox Platforms
 
 ### Ubuntu Templates
-    - name: OS
+    - name: Set NB Platform var dependent on template chosen
       set_fact:
           host_plat: ubuntu
-      when: host_template == "ubuntu"
+      when: host_template == "ubuntu_20.04"
 
-### Ubuntu Templates
-#    - name: Set NB Platform var dependent on template chosen
-#      set_fact:
-#          host_plat: Ubuntu19Server
-#      when: host_template == "ubuntu19_server"
+### Windows Server Templates
+    - name: Set NB Platform var dependent on template chosen
+      set_fact:
+          host_plat: windows
+      when: host_template == "windows_server_2019"
 
-
-### Windows Templates
-#    - name: Set NB Platform var dependent on template chosen
-#      set_fact:
-#          host_plat: WinSvr2k19
-#      when: host_template == "win2k19"
+### opensuse Templates
+    - name: Set NB Platform var dependent on template chosen
+      set_fact:
+          host_plat: opensuse
+      when: host_template == "opensuse_leap"
 #  
 #    - name: Set NB Platform var dependent on template chosen
 #      set_fact:
