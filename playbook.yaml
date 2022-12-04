@@ -5,7 +5,7 @@
   hosts: localhost
   gather_facts: False
   collections:
-    - netbox.netbox
+    - netbox.netbox.common
   pre_tasks:
     - include_vars: vars.yaml
 
@@ -56,7 +56,7 @@
         netbox_token: 0123456789abcdef0123456789abcdef01234567
         #netbox_token: "{{ nb_token }}"
         data:
-          name: "{{ host_name_prefix }}{{ host_name }}"
+          name: "{{host_name_prefix}}{{ host_name }}"
           #virtual_machine_role: "{{ host_role }}"
           #site: "{{ host_site }}"
           #tenant: "{{ ten }}"
