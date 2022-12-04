@@ -1,0 +1,4 @@
+---
+Collections: 
+  - name: netbox.netbox
+  - source: https://cloud.redhat.com/api/automation-hub/
