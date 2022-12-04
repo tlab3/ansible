@@ -54,7 +54,7 @@
         validate_certs: False
         netbox_token: "{{ nb_token }}"
         data:
-          name: "{{host_name_prefix}}{{ host_name }}"
+          name: "{{ host_name_prefix }}{{ host_name }}"
           virtual_machine_role: "{{ host_role }}"
           site: "{{ host_site }}"
           tenant: "{{ ten }}"
