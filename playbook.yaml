@@ -66,20 +66,20 @@
           status: Active
         state: present
     
-#    - name: NB Task 2 - Create an Interface for NetBox VM entry
-#      netbox_vm_interface:
-#        netbox_url: "{{ nb_url }}"
-#        validate_certs: False
-#        netbox_token: "{{ nb_token }}"
-#        data:
-#          name: "{{ host_net_name }}"
-#          untagged_vlan: "{{ host_net_vlan }}"
-#          description: "{{ host_net_desc }}"
-#          virtual_machine: "{{ host_name_prefix }}{{ host_name }}"
-#          mode: Access
-#          enabled: yes
-#        state: present
-#      
+    - name: NB Task 2 - Create an Interface for NetBox VM entry
+      netbox_vm_interface:
+        netbox_url: "{{ nb_url }}"
+        validate_certs: False
+        netbox_token: "{{ nb_token }}"
+        data:
+          name: "{{ host_net_name }}"
+          untagged_vlan: "{{ host_net_vlan }}"
+          description: "{{ host_net_desc }}"
+          virtual_machine: "{{ host_name_prefix }}{{ host_name }}"
+          mode: Access
+          enabled: yes
+        state: present
+      
 #    - name: NB Task 3 - Get new IP address, assign to VM interface, then create NB entry
 #      netbox_ip_address:
 #        netbox_url: "{{ nb_url }}"
