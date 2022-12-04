@@ -130,9 +130,9 @@
 #          type: "{{ host_disktype }}"
           datastore: "{{ host_dstore }}"
         hardware:
-          memory_mb: "{{ host_mem | int + 1}}"
-          num_cpus: "{{ host_vcpu | int + 1}}"
-          num_cpu_cores_per_socket: "{{ host_cores | int + 1}}"
+          memory_mb: "{{ host_mem | int }}"
+          num_cpus: "{{ host_vcpu | int }}"
+          num_cpu_cores_per_socket: "{{ host_cores | int }}"
           scsi: paravirtual
           memory_reservation_lock: True
           hotadd_cpu: True
