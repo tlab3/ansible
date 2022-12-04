@@ -52,7 +52,7 @@ nb_token: 0123456789abcdef0123456789abcdef01234567
 ##  Corporate
 corp_name: /
 corp_tag: mgmt
-#corp_host_name_prefix: (Sets VM prefixed name)
+corp_host_name_prefix: JJDC-
 corp_prefix: 10.200.0.0/24
 corp_ipnetmask: 255.255.255.0
 corp_ipgwy: 10.200.0.1
