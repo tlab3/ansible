@@ -68,7 +68,7 @@ ipaddrtxt: ./temp/ipaddr.txt
 ## Host Config
 host_role: Virtual Machine
 host_site: JJDC-Datacenter
-#host_rack:
+host_rack: AA01
 host_cluster: JJDC-Cluster
 tengrp: JJDC
 ten: Aarhus
