@@ -48,7 +48,7 @@
           host_plat: opensuse
       when: host_template == "opensuse_leap"
 
-    - name: netbox
+    - name: Create Virtual Machine within Netbox with only required information
       netbox_virtual_machine:
         netbox_url: "{{ nb_url }}"
         validate_certs: False
