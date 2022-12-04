@@ -45,7 +45,7 @@ vcenter_pass: Datait2022!
 vcenter_dc: Datacenter
 
 # NetBox Connection
-nb_url: http://10.200.0.42
+nb_url: http://10.200.0.42:8000
 nb_token: 0123456789abcdef0123456789abcdef01234567
 
 # Network Environment Configuration Vars
