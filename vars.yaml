@@ -66,7 +66,7 @@ host_net_desc: "{{ host_net_name }} connected to {{ host_net_vlan }}"
 ## IP Address Temp File
 ipaddrtxt: ./temp/ipaddr.txt
 ## Host Config
-host_role: Virtual Machine
+host_role: VM
 host_site: JJDC-Datacenter
 host_rack: AA01
 host_cluster: JJDC-Cluster
