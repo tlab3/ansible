@@ -49,7 +49,7 @@
       when: host_template == "opensuse_leap"
 
     - name: NB Task 1 - Create a new NetBox VM entry
-      .netbox_virtual_machine:
+      netbox.netbox.netbox_virtual_machine:
         netbox_url: "{{ nb_url }}"
         validate_certs: False
         netbox_token: "{{ nb_token }}"
