@@ -20,7 +20,7 @@
           vcenter_folder: "{{ corp_name }}"
           host_net_vlan: "{{ corp_name }}"
           #host_net_ipnetmask: "{{ corp_netmask }}"
-          host_net_ipgwy: "{{ corp_ipgwy }}"
+          #host_net_ipgwy: "{{ corp_ipgwy }}"
           host_net_dns: "{{ corp_dns }}"
           host_tag: "{{ corp_tag }}"
           host_name_prefix: "{{ corp_host_name_prefix }}"
@@ -54,8 +54,7 @@
         validate_certs: False
         netbox_token: "{{ nb_token }}"
         data:
-          #name: "{{ host_name_prefix }}{{ host_name }}"
-          name: JJDC
+          name: "{{ host_name_prefix }}{{ host_name }}"
           virtual_machine_role: "{{ host_role }}"
           site: "{{ host_site }}"
           tenant: "{{ ten }}"
