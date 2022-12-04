@@ -49,8 +49,7 @@
       when: host_template == "opensuse_leap"
 
     - name: netbox
-      netbox.netbox.netbox_virtual_machine:
-      #netbox_virtual_machine:
+      netbox_virtual_machine:
         netbox_url: "{{ nb_url }}"
         validate_certs: False
         netbox_token: "{{ nb_token }}"
@@ -151,7 +150,7 @@
           gateway: 10.200.0.1
 #          gateway: "{{ host_net_ipgwy }}"
           dns_servers: "{{ host_net_dns }}"
-#        wait_for_ip_address: yes
-#        wait_for_ip_address_timeout: 300
+        wait_for_ip_address: yes
+        wait_for_ip_address_timeout: 300
       delegate_to: localhost
       register: deploy
