@@ -34,7 +34,7 @@
     - name: Set NB Platform var dependent on template chosen
       set_fact:
           host_plat: ubuntu
-      when: host_template == "ubuntu_20.04"
+      when: host_template == "ubuntu"
 
 ### Windows Server Templates
     - name: Set NB Platform var dependent on template chosen
