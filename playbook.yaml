@@ -129,7 +129,8 @@
         hostname: "{{ vcenter_host }}"
         username: "{{ vcenter_user }}"
         password: "{{ vcenter_pass }}"
-        esxi_hostname: "{{ esxi_host }}"
+        esxi_hostname: 10.200.0.20
+        #esxi_hostname: "{{ esxi_host }}"
         datacenter: "{{ vcenter_dc }}"
         validate_certs: no
         folder: "{{ vcenter_folder }}"
