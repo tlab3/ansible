@@ -43,10 +43,10 @@
       when: host_template == "windows_server_2019"
 
 ### opensuse Templates
-    - name: Set NB Platform var dependent on template chosen
-      set_fact:
-          host_plat: opensuse
-      when: host_template == "opensuse_leap"
+#    - name: Set NB Platform var dependent on template chosen
+#      set_fact:
+#          host_plat: opensuse
+#      when: host_template == "opensuse_leap"
 
 ###  #This is a test of netbox inegration
 #    - name: Test
