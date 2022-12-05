@@ -3,7 +3,7 @@
   hosts: localhost
   become: true
   vars:
-    module_name: netbox_virtual_machine
+    module_name: netbox.netbox.netbox_virtual_machine
     ansible_connection: local
   tasks:
     - name: load the module
