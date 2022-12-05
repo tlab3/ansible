@@ -12,7 +12,7 @@
   tasks:
     - name: "NB Task 1 - Create a new NetBox VM entry"
       netbox.netbox:
-        netbox_url: "http://netbox.com"
+        netbox_url: '{{ netbox_url }}'
         validate_certs: False
         netbox_token: "0123456789abcdef0123456789abcdef01234567"
         data:
