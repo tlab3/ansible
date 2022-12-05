@@ -2,7 +2,7 @@
 
 - name: "Deploy VM Host & NetBox"
   connection: local
-  hosts: localhost
+  hosts: all
   gather_facts: False
   #collections:
   #  - netbox.netbox
