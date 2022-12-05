@@ -49,14 +49,14 @@
       when: host_template == "opensuse_leap"
 
 ###  #This is a test of netbox inegration
-    - name: Test
-      netbox_virtual_machine:
-        netbox_url: http://10.200.0.42:8000
-        netbox_token: 0123456789abcdef0123456789abcdef01234567
-        data:
-          name: "{{host_name_prefix}}{{ host_name }}"
-          cluster: JJDC-Cluster
-        state: present
+#    - name: Test
+#      netbox_virtual_machine:
+#        netbox_url: http://10.200.0.42:8000
+#        netbox_token: 0123456789abcdef0123456789abcdef01234567
+#        data:
+#          name: "{{host_name_prefix}}{{ host_name }}"
+#          cluster: JJDC-Cluster
+#        state: present
    
 
 #    - name: NB Task 1 - Create a new NetBox VM entry
