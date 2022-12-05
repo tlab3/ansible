@@ -10,7 +10,7 @@
     - include_vars: vars.yaml
 
   tasks:
-    - name: "NB Task 1 - Create a new NetBox VM entry"
+    - name: NB Task 1 - Create a new NetBox VM entry
       netbox.netbox.netbox_virtual_machine:
         netbox_url: "10.200.0.42:8000"
         validate_certs: False
