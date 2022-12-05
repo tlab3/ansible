@@ -4,8 +4,8 @@
   connection: local
   hosts: localhost
   gather_facts: False
-  collections:
-    - netbox.netbox
+ # collections:
+  #  - netbox.netbox
   pre_tasks:
     - include_vars: vars.yaml
 
