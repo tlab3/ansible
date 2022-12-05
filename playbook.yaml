@@ -48,7 +48,7 @@
 #          host_plat: opensuse
 #      when: host_template == "opensuse_leap"
 
-    - name: "NB Task 1 - Create a new NetBox VM entry"
+#    - name: "NB Task 1 - Create a new NetBox VM entry"
       netbox.netbox.netbox_virtual_machine:
         netbox_url: "http://10.200.0.42"
         validate_certs: False
