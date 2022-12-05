@@ -11,8 +11,8 @@
 
   tasks:
     - name: "NB Task 1 - Create a new NetBox VM entry"
-      netbox.netbox:
-        netbox_url: '{{ netbox_url }}'
+      netbox.netbox.netbox_virtual_machine:
+        netbox_url: "10.200.0.42:8000"
         validate_certs: False
         netbox_token: "0123456789abcdef0123456789abcdef01234567"
         data:
