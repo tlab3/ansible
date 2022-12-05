@@ -6,7 +6,6 @@
   gather_facts: False
   collections:
     - netbox.netbox
-    - netbox.netbox.netbox_virtual_machine
   pre_tasks:
     - include_vars: vars.yaml
 
