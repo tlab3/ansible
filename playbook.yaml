@@ -4,8 +4,8 @@
   connection: local
   hosts: localhost
   gather_facts: False
- # collections:
-  #  - netbox.netbox
+  collections:
+    - netbox.netbox
   pre_tasks:
     - include_vars: vars.yaml
 
@@ -48,11 +48,11 @@
 #          host_plat: opensuse
 #      when: host_template == "opensuse_leap"
 
-    - name: NB Task 1 - Create a new NetBox VM entry
-      netbox_virtual_machine:
-        netbox_url: http://10.200.0.42
+    - name: "NB Task 1 - Create a new NetBox VM entry"
+      netbox.netbox.netbox_virtual_machine:
+        netbox_url: "http://10.200.0.42"
         validate_certs: False
-        netbox_token: 0123456789abcdef0123456789abcdef01234567
+        netbox_token: "0123456789abcdef0123456789abcdef01234567"
         data:
           name: TEST
           virtual_machine_role: Virtual Machine
@@ -62,7 +62,7 @@
           disk: 150
           vcpus: 4
           memory: 4096
-  #        platform: ubuntu
+          platform: ubuntu
           status: Active
         state: present  
       
