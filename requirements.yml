@@ -1,4 +1,4 @@
 ---
 collections:
   - name: netbox.netbox
-  - source: https://galaxy.ansible.com
+  - source: https://github.com/netbox-community/ansible_modules.git
