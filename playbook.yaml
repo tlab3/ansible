@@ -135,7 +135,8 @@
         folder: "{{ vcenter_folder }}"
         name: "{{ host_name_prefix }}{{ host_name }}"
         state: poweredon
-        template: "{{ host_template }}"
+        template: ubuntu
+        #template: "{{ host_template }}"
         disk:
         - size_gb: "{{ host_disk }}"
 #          type: "{{ host_disktype }}"
