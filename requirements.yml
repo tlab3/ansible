@@ -1,0 +1,12 @@
+---
+- name: netbox 
+  hosts: localhost
+  become: true
+  vars:
+    module_name: netbox_virtual_machine
+    ansible_connection: local
+  tasks:
+    - name: load the module
+      netbox.netbox:
+        name: "{{ module_name }}"
+        state: present
